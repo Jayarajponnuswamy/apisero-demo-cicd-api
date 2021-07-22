@@ -8,7 +8,9 @@ pipeline {
     }
  	stage('Test') { 
       steps {
-        echo 'Test Appplication...' 
+        echo 'Test Appplication...'
+	set M2_HOME=C:\apache-maven\apache-maven-3.8.1
+        set path=C:\apache-maven\apache-maven-3.8.1\bin:%path%;
         bat 'mvn test'
       }
     }
